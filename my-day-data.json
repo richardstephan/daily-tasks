@@ -1,0 +1,225 @@
+{
+  "tasks": [
+    {
+      "id": "h9r19bsnlqnmmjlboh9",
+      "title": "Daily Production Meeting",
+      "notes": "Team sync at 9am",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "active": true,
+      "createdAt": "2026-03-09T19:44:55.725Z",
+      "targetTime": "09:00",
+      "notify": true,
+      "webLink": "https://inteplast.zoom.us/j/91895324823?pwd=eSXAlBfKbbrn3UuVdvE3ud1lrk6KwE.1",
+      "private": false
+    },
+    {
+      "id": "a8zj2zn1z86mmjm4vai",
+      "title": "Flowmax",
+      "notes": "",
+      "targetTime": "20:00",
+      "notify": true,
+      "webLink": "",
+      "priority": "high",
+      "recurrence": "daily",
+      "active": true,
+      "createdAt": "2026-03-09T20:07:37.578Z",
+      "specificDate": "2026-03-09",
+      "private": true
+    },
+    {
+      "id": "24za4nplemmmjm65yw",
+      "title": "Daily Scheduling Meeting",
+      "notes": "",
+      "targetTime": "11:00",
+      "notify": true,
+      "webLink": "https://inteplast.zoom.us/j/91895324823?pwd=eSXAlBfKbbrn3UuVdvE3ud1lrk6KwE.1",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "active": true,
+      "createdAt": "2026-03-09T20:08:38.072Z",
+      "private": false
+    },
+    {
+      "id": "oobs4xflzyommjmaht5",
+      "title": "Pickup Check from PO Box",
+      "notes": "",
+      "targetTime": "18:00",
+      "notify": true,
+      "webLink": "",
+      "priority": "high",
+      "recurrence": "once",
+      "active": true,
+      "createdAt": "2026-03-09T20:12:00.041Z",
+      "specificDate": "2026-03-09",
+      "private": true
+    },
+    {
+      "id": "n9dlsmxjvlmmjmenmh",
+      "title": "Bloodpressure Medicine",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "high",
+      "recurrence": "daily",
+      "active": true,
+      "createdAt": "2026-03-09T20:15:14.201Z",
+      "private": true
+    },
+    {
+      "id": "758vxfl1lnmmjmmhrv",
+      "title": "Daniel Haircut",
+      "notes": "",
+      "targetTime": "09:00",
+      "notify": true,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": true,
+      "active": true,
+      "createdAt": "2026-03-09T20:21:19.867Z",
+      "specificDate": "2026-03-21"
+    },
+    {
+      "id": "asumaetc6uemmjmzr0h",
+      "title": "Weekly Quality Work Meeting",
+      "notes": "",
+      "targetTime": "13:00",
+      "notify": true,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "weekly",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-09T20:31:38.369Z",
+      "weekday": 2
+    },
+    {
+      "id": "0ew30qgiputqmmjn41e7",
+      "title": "Month Beginning Jobs",
+      "notes": "Save Plant Temperature Graph: \nZ:\\Niaflex Production Reports\\PLANT\\Temperatures\n\nClose Production by 9pm - Posting and month end!\n\nRichard  \t70-80\nJeremy\t\t11-80\n\nDo not post twice! \nIf there is no response at posting have Marco check if posting went through.\nCheck F6 & F7\n\nQuery date update:\nNFORDPR\nNFSHIPSUMR\nBSORFRTRS\nNFQTY2STK",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "monthly",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-09T20:34:58.447Z",
+      "dayOfMonth": 1
+    },
+    {
+      "id": "h6jacxn86q6mmjn6xjz",
+      "title": "Create Personal Task Manager with Claude",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-09T20:37:13.439Z",
+      "specificDate": "2026-03-09"
+    },
+    {
+      "id": "28yltpiqmx8mmjn7gkt",
+      "title": "Updated Matics Error log with Claude Code",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-09T20:37:38.093Z",
+      "specificDate": "2026-03-09"
+    },
+    {
+      "id": "xbe58ihyegbmmjrqnyv",
+      "title": "Zoey",
+      "notes": "",
+      "targetTime": "06:25",
+      "notify": true,
+      "webLink": "",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "private": true,
+      "active": true,
+      "createdAt": "2026-03-09T22:44:32.599Z"
+    }
+  ],
+  "completions": [
+    {
+      "id": "tm6d2r9aucmmjm723y",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-09T20:09:19.726Z",
+      "date": "2026-03-09",
+      "priority": "high",
+      "recurrence": "weekdays"
+    },
+    {
+      "id": "jf7deu3zo3qmmjm7dej",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-09T20:09:34.364Z",
+      "date": "2026-03-09",
+      "priority": "high",
+      "recurrence": "weekdays"
+    },
+    {
+      "id": "utml33o0rfcmmjmexba",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-09T20:15:26.758Z",
+      "date": "2026-03-09",
+      "priority": "high",
+      "recurrence": "daily"
+    },
+    {
+      "id": "we18zklsulhmmjn7k1z",
+      "taskId": "28yltpiqmx8mmjn7gkt",
+      "taskTitle": "Updated Matics Error log with Claude Code",
+      "completedAt": "2026-03-09T20:37:42.599Z",
+      "date": "2026-03-09",
+      "priority": "low",
+      "recurrence": "once"
+    },
+    {
+      "id": "ogujcb348dhmmjn7og1",
+      "taskId": "h6jacxn86q6mmjn6xjz",
+      "taskTitle": "Create Personal Task Manager with Claude",
+      "completedAt": "2026-03-09T20:37:48.289Z",
+      "date": "2026-03-09",
+      "priority": "low",
+      "recurrence": "once"
+    },
+    {
+      "id": "d6exdrqd7immjr8gqv",
+      "taskId": "oobs4xflzyommjmaht5",
+      "taskTitle": "Pickup Check from PO Box",
+      "completedAt": "2026-03-09T22:30:23.431Z",
+      "date": "2026-03-09",
+      "priority": "high",
+      "recurrence": "once"
+    },
+    {
+      "id": "35sv940rg5ammjrqwn0",
+      "taskId": "xbe58ihyegbmmjrqnyv",
+      "taskTitle": "Zoey",
+      "completedAt": "2026-03-09T22:44:43.836Z",
+      "date": "2026-03-09",
+      "priority": "high",
+      "recurrence": "weekdays"
+    }
+  ],
+  "settings": {
+    "ntfyEnabled": true,
+    "ntfyTopic": "richard-tasks-7842",
+    "leadTime": 10
+  },
+  "savedAt": "2026-03-09T23:40:41.316Z"
+}
