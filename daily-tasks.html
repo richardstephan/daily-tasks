@@ -1908,6 +1908,31 @@ async function connectDataFile() {
   }
 }
 
+async function openDataFile() {
+  if (!('showOpenFilePicker' in window)) { showToast('File API not supported in this browser'); return; }
+  try {
+    const [handle] = await window.showOpenFilePicker({
+      types: [{ description: 'JSON Data', accept: { 'application/json': ['.json'] } }]
+    });
+    const perm = await handle.requestPermission({ mode: 'readwrite' });
+    if (perm !== 'granted') { showToast('Readwrite permission is needed to auto-save'); return; }
+    _fileHandle = handle;
+    await storeHandle(handle);
+    const loaded = await loadFromFile();
+    if (loaded) {
+      renderAll();
+      showToast('Data loaded from file!', 'success');
+    } else {
+      await saveToFile();
+      showToast('File connected!', 'success');
+    }
+    updateFileBadge();
+    updateFileModalSection();
+  } catch (e) {
+    if (e.name !== 'AbortError') showToast('Could not open file');
+  }
+}
+
 async function reconnectFile() {
   if (!_fileHandle) return;
   try {
@@ -1957,11 +1982,14 @@ function updateFileModalSection() {
       <div class="setting-row">
         <div>
           <div class="setting-label">💾 Data File</div>
-          <div class="setting-sub">Auto-save to a .json file alongside your HTML</div>
+          <div class="setting-sub">Auto-save to a .json file on your computer</div>
         </div>
-        <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px" onclick="connectDataFile()">Connect File</button>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px" onclick="openDataFile()">Open Existing</button>
+          <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px" onclick="connectDataFile()">Create New</button>
+        </div>
       </div>
-      <div class="ntfy-info" style="margin-top:8px">Click <strong>Connect File</strong> to choose where to save your data. All tasks and history will auto-save there on every change.</div>`;
+      <div class="ntfy-info" style="margin-top:8px"><strong>Open Existing</strong> — load your saved <code>my-day-data.json</code> file and restore all data.<br><strong>Create New</strong> — start fresh with a new data file.</div>`;
   } else {
     el.innerHTML = `
       <div class="setting-row">
