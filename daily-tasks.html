@@ -1018,6 +1018,11 @@
       <!-- Data File -->
       <div id="fileSection"></div>
 
+      <hr class="divider" style="margin:16px 0">
+
+      <!-- GitHub Sync -->
+      <div id="githubSection"></div>
+
     </div>
     <div class="modal-footer">
       <button class="btn btn-secondary" onclick="testNotification()">Test Now</button>
@@ -1040,6 +1045,7 @@ function loadTasks() {
 function saveTasks(tasks) {
   localStorage.setItem(TASKS_KEY, JSON.stringify(tasks));
   saveToFile();
+  scheduleGitHubSave();
 }
 function loadCompletions() {
   try { return JSON.parse(localStorage.getItem(COMPLETIONS_KEY)) || []; } catch { return []; }
@@ -1047,6 +1053,7 @@ function loadCompletions() {
 function saveCompletions(completions) {
   localStorage.setItem(COMPLETIONS_KEY, JSON.stringify(completions));
   saveToFile();
+  scheduleGitHubSave();
 }
 
 // ─── Date Helpers ──────────────────────────────────────────────────────────────
@@ -1676,7 +1683,7 @@ const NOTIFIED_KEY = 'dt_notified';
 function loadSettings() {
   try { return JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {}; } catch { return {}; }
 }
-function saveSettingsData(s) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); saveToFile(); }
+function saveSettingsData(s) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); saveToFile(); scheduleGitHubSave(); }
 
 function loadNotified() {
   try { return JSON.parse(localStorage.getItem(NOTIFIED_KEY)) || []; } catch { return []; }
@@ -1717,6 +1724,7 @@ function openSettings() {
   document.getElementById('leadTime').value = s.leadTime !== undefined ? String(s.leadTime) : '10';
   updateBrowserNotifStatus();
   updateFileModalSection();
+  updateGitHubModalSection();
   document.getElementById('settingsOverlay').classList.add('open');
 }
 
@@ -2027,6 +2035,149 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// ─── GitHub Sync ───────────────────────────────────────────────────────────────
+const GH_TOKEN_KEY = 'dt_gh_token';
+const GH_OWNER_KEY = 'dt_gh_owner';
+const GH_REPO_KEY  = 'dt_gh_repo';
+const GH_FILE_PATH = 'my-day-data.json';
+let _ghSaveTimer = null;
+let _ghSaving    = false;
+
+function getGhConfig() {
+  return {
+    token: localStorage.getItem(GH_TOKEN_KEY) || '',
+    owner: localStorage.getItem(GH_OWNER_KEY) || 'richardstephan',
+    repo:  localStorage.getItem(GH_REPO_KEY)  || 'daily-tasks',
+  };
+}
+
+async function githubGetFile() {
+  const { token, owner, repo } = getGhConfig();
+  if (!token) return null;
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${GH_FILE_PATH}`,
+    { headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' } }
+  );
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+  return res.json();
+}
+
+async function githubPutFile(content, sha) {
+  const { token, owner, repo } = getGhConfig();
+  if (!token) return null;
+  const body = { message: 'Auto-save: daily tasks', content: btoa(unescape(encodeURIComponent(content))) };
+  if (sha) body.sha = sha;
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${GH_FILE_PATH}`,
+    { method: 'PUT', headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
+  );
+  if (!res.ok) throw new Error(`GitHub PUT ${res.status}`);
+  const d = await res.json();
+  return d.content.sha;
+}
+
+async function loadFromGitHub() {
+  const { token } = getGhConfig();
+  if (!token) return false;
+  try {
+    const file = await githubGetFile();
+    if (!file) return false;
+    const text = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ''))));
+    const data = JSON.parse(text);
+    if (Array.isArray(data.tasks))       localStorage.setItem(TASKS_KEY,       JSON.stringify(data.tasks));
+    if (Array.isArray(data.completions)) localStorage.setItem(COMPLETIONS_KEY, JSON.stringify(data.completions));
+    if (data.settings && typeof data.settings === 'object') localStorage.setItem(SETTINGS_KEY, JSON.stringify(data.settings));
+    return true;
+  } catch (e) { console.warn('GitHub load failed:', e); return false; }
+}
+
+function scheduleGitHubSave() {
+  if (!getGhConfig().token) return;
+  clearTimeout(_ghSaveTimer);
+  _ghSaveTimer = setTimeout(doGitHubSave, 8000);
+}
+
+async function doGitHubSave() {
+  if (_ghSaving || !getGhConfig().token) return;
+  _ghSaving = true;
+  try {
+    const current = await githubGetFile();
+    const sha = current ? current.sha : undefined;
+    const data = { tasks: loadTasks(), completions: loadCompletions(), settings: loadSettings(), savedAt: new Date().toISOString() };
+    await githubPutFile(JSON.stringify(data, null, 2), sha);
+  } catch (e) { console.warn('GitHub save failed:', e); }
+  finally { _ghSaving = false; }
+}
+
+async function saveGitHubConfig() {
+  const token = document.getElementById('ghTokenInput').value.trim();
+  const owner = document.getElementById('ghOwnerInput').value.trim();
+  const repo  = document.getElementById('ghRepoInput').value.trim();
+  if (!token || !owner || !repo) { showToast('Please fill in all fields'); return; }
+  localStorage.setItem(GH_TOKEN_KEY, token);
+  localStorage.setItem(GH_OWNER_KEY, owner);
+  localStorage.setItem(GH_REPO_KEY,  repo);
+  showToast('Testing connection…');
+  try {
+    const file = await githubGetFile();
+    if (file === null) {
+      await doGitHubSave();
+      showToast('Connected! Data saved to GitHub.', 'success');
+    } else {
+      showToast('Connected to GitHub! ✓', 'success');
+    }
+  } catch { showToast('Connection failed — check token and repo name'); }
+  updateGitHubModalSection();
+}
+
+async function syncNowFromGitHub() {
+  showToast('Loading from GitHub…');
+  const loaded = await loadFromGitHub();
+  if (loaded) { renderAll(); showToast('Data loaded from GitHub! ✓', 'success'); }
+  else showToast('Could not load — check config or token');
+}
+
+async function clearGitHubConfig() {
+  if (!confirm('Disconnect GitHub sync?')) return;
+  localStorage.removeItem(GH_TOKEN_KEY);
+  clearTimeout(_ghSaveTimer);
+  updateGitHubModalSection();
+  showToast('GitHub sync disconnected');
+}
+
+function updateGitHubModalSection() {
+  const el = document.getElementById('githubSection');
+  if (!el) return;
+  const { token, owner, repo } = getGhConfig();
+  el.innerHTML = `
+    <div class="setting-row" style="margin-bottom:10px">
+      <div>
+        <div class="setting-label">☁️ GitHub Sync</div>
+        <div class="setting-sub">Sync your data to GitHub — works on any device</div>
+      </div>
+      ${token ? `<button class="btn btn-secondary" style="font-size:12px;padding:5px 10px;color:var(--danger);border-color:#fca5a5" onclick="clearGitHubConfig()">Disconnect</button>` : ''}
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <input id="ghTokenInput" type="password" placeholder="GitHub Personal Access Token" value="${token}"
+        style="width:100%;box-sizing:border-box;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;background:var(--surface);color:var(--text)">
+      <div style="display:flex;gap:8px">
+        <input id="ghOwnerInput" type="text" placeholder="GitHub username" value="${owner}"
+          style="flex:1;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;background:var(--surface);color:var(--text)">
+        <input id="ghRepoInput" type="text" placeholder="Repo name" value="${repo}"
+          style="flex:1;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;background:var(--surface);color:var(--text)">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="saveGitHubConfig()">Save &amp; Connect</button>
+        <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="syncNowFromGitHub()">↓ Load from GitHub</button>
+        <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="doGitHubSave().then(()=>showToast('Saved! ✓','success'))">↑ Push to GitHub</button>
+      </div>
+    </div>
+    <div class="ntfy-info" style="margin-top:8px">
+      Create a <strong>fine-grained token</strong> at <a href="https://github.com/settings/tokens" target="_blank" style="color:var(--primary)">github.com/settings/tokens</a> → <em>Fine-grained tokens</em> → give it <strong>Contents: Read &amp; Write</strong> for the <code>${repo}</code> repo. Data auto-saves 8 seconds after any change.
+    </div>`;
+}
+
 // ─── Init ──────────────────────────────────────────────────────────────────────
 async function init() {
   // Header date & greeting
@@ -2044,11 +2195,16 @@ async function init() {
   checkDueReminders(); // check immediately on load
   setInterval(checkDueReminders, 30000); // check every 30s
 
-  // Load file handle from IndexedDB and restore data from file
-  _fileHandle = await getStoredHandle();
-  if (_fileHandle) {
-    await loadFromFile();
-    updateFileBadge();
+  // Load from GitHub if configured (takes priority over local file)
+  const ghLoaded = await loadFromGitHub();
+
+  // Load file handle from IndexedDB and restore data from file (if no GitHub)
+  if (!ghLoaded) {
+    _fileHandle = await getStoredHandle();
+    if (_fileHandle) {
+      await loadFromFile();
+      updateFileBadge();
+    }
   }
 
   // Seed with example tasks if empty
