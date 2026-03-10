@@ -226,9 +226,9 @@
     }
   ],
   "settings": {
-    "ntfyEnabled": false,
+    "ntfyEnabled": true,
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T02:04:24.312Z"
+  "savedAt": "2026-03-10T02:04:53.275Z"
 }
