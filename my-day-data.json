@@ -269,6 +269,15 @@
       "date": "2026-03-10",
       "priority": "high",
       "recurrence": "daily"
+    },
+    {
+      "id": "1pvmmf0llokmmkn40ex",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-10T13:22:43.353Z",
+      "date": "2026-03-10",
+      "priority": "high",
+      "recurrence": "weekdays"
     }
   ],
   "settings": {
@@ -276,5 +285,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T13:22:09.732Z"
+  "savedAt": "2026-03-10T13:22:51.713Z"
 }
