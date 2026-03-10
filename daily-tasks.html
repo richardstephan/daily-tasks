@@ -1885,6 +1885,7 @@ function sendNtfyNotif(task) {
   fetch(`https://ntfy.sh/${encodeURIComponent(s.ntfyTopic)}`, {
     method: 'POST',
     headers: {
+      'Content-Type': 'text/plain',
       'Title': `Task Due: ${task.title}`,
       'Tags': 'alarm_clock',
       'Priority': prio
@@ -1893,11 +1894,40 @@ function sendNtfyNotif(task) {
   }).catch(() => {});
 }
 
-function testNotification() {
+async function testNotification() {
   const fake = { title: 'Test Reminder', notes: 'This is a test notification', targetTime: '09:00', priority: 'medium' };
   sendBrowserNotif(fake);
-  sendNtfyNotif(fake);
-  showToast('Test notification sent!', 'success');
+
+  // Read topic from input field if settings modal is open, otherwise from saved settings
+  const inputEl = document.getElementById('ntfyTopic');
+  const topic = (inputEl ? inputEl.value.trim() : '') || loadSettings().ntfyTopic;
+  const enabled = document.getElementById('ntfyEnabled')?.checked ?? loadSettings().ntfyEnabled;
+
+  if (!enabled || !topic) {
+    showToast('⚠️ ntfy not configured — enter a topic and enable it first');
+    return;
+  }
+
+  showToast('Sending to ntfy…');
+  try {
+    const res = await fetch(`https://ntfy.sh/${encodeURIComponent(topic)}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain',
+        'Title': 'Test Reminder',
+        'Tags': 'alarm_clock',
+        'Priority': '3'
+      },
+      body: 'This is a test notification from My Day app'
+    });
+    if (res.ok) {
+      showToast(`✅ ntfy sent to topic "${topic}"`, 'success');
+    } else {
+      showToast(`❌ ntfy error ${res.status} — check topic name`);
+    }
+  } catch (e) {
+    showToast('❌ ntfy failed — check your internet connection');
+  }
 }
 
 function checkDueReminders() {
