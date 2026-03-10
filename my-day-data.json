@@ -324,6 +324,26 @@
       "date": "2026-03-10",
       "priority": "low",
       "recurrence": "once"
+    },
+    {
+      "id": "a7m3azkyoimmkojwg3",
+      "taskId": "y0r3rnt6ammko6t96",
+      "taskTitle": "See if the documents search can show results while typing",
+      "completedAt": "2026-03-10T14:03:04.323Z",
+      "date": "2026-03-10",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
+    },
+    {
+      "id": "8spkxclsovmmkojzup",
+      "taskId": "mf1vt2jpc28mmkn3474",
+      "taskTitle": "Remove Brokerage from Glass Break Forms",
+      "completedAt": "2026-03-10T14:03:08.737Z",
+      "date": "2026-03-10",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -331,5 +351,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T13:53:02.268Z"
+  "savedAt": "2026-03-10T14:03:17.116Z"
 }
