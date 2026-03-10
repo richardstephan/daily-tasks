@@ -1106,10 +1106,25 @@
       <!-- GitHub Sync -->
       <div id="githubSection"></div>
 
+      <hr class="divider" style="margin:16px 0">
+
+      <!-- Changelog -->
+      <div>
+        <button class="section-toggle" onclick="toggleChangelog()" id="changelogToggle" style="padding:6px 0">
+          <span class="toggle-arrow" id="changelogArrow">▶</span>
+          <span style="font-size:13px">What's New</span>
+          <span id="versionBadge" style="font-size:11px;font-weight:700;color:var(--text-muted);margin-left:4px"></span>
+        </button>
+        <div id="changelogBody" style="display:none"></div>
+      </div>
+
     </div>
-    <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="testNotification()">Test Now</button>
-      <button class="btn btn-primary" onclick="saveNotifSettings()">Save</button>
+    <div class="modal-footer" style="justify-content:space-between;align-items:center">
+      <span id="versionFooter" style="font-size:12px;color:var(--text-muted)"></span>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-secondary" onclick="testNotification()">Test Now</button>
+        <button class="btn btn-primary" onclick="saveNotifSettings()">Save</button>
+      </div>
     </div>
   </div>
 </div>
@@ -1118,6 +1133,62 @@
 <div class="toast" id="toast"></div>
 
 <script>
+// ─── Version & Changelog ───────────────────────────────────────────────────────
+const APP_VERSION = '1.6.0';
+
+/*
+ * CHANGELOG
+ * ─────────────────────────────────────────────────────────────────────────────
+ *
+ * v1.6.0 — 2026-03-10
+ *   - ntfy notifications now play a sound (ding) on delivery
+ *   - Test button shows real success/failure instead of always saying "sent"
+ *   - Test reads topic from input field directly (no Save required first)
+ *   - Added Content-Type header to ntfy requests for reliability
+ *
+ * v1.5.0 — 2026-03-10
+ *   - History entries now tagged as 🏢 Work or 🔒 Personal
+ *   - Work / Personal filter buttons added to History view
+ *   - Category stored on each completion; old completions resolved via task flag
+ *
+ * v1.4.0 — 2026-03-10
+ *   - Full mobile / touch-screen layout
+ *   - Modals slide up as bottom sheets on small screens
+ *   - Task action buttons always visible on touch devices (no hover needed)
+ *   - Form rows stack vertically on mobile
+ *   - Bigger tap targets for checkboxes and buttons
+ *   - Toast centred at bottom on mobile
+ *   - Extra tweaks for very small phones (< 380 px)
+ *
+ * v1.3.0 — 2026-03-10
+ *   - GitHub API sync for true cross-device data access
+ *   - Data auto-saves to repo 8 seconds after any change
+ *   - Token + repo configured once in Settings → ☁️ GitHub Sync
+ *   - Open Existing File option added to local file section
+ *
+ * v1.2.0 — 2026-03-10
+ *   - Hosted on GitHub Pages (HTTPS)
+ *   - Automatic hourly git commit & push via scheduled task
+ *
+ * v1.1.0 — 2026-03-09
+ *   - File System Access API persistence: auto-save to local .json file
+ *   - File handle stored in IndexedDB so it survives page reloads
+ *   - 💾 button in header with green/orange status dot
+ *
+ * v1.0.0 — 2026-03-09
+ *   - Initial release
+ *   - Daily task view with Today / Tomorrow / History / Schedule tabs
+ *   - Recurring tasks: daily, weekdays, weekly, monthly, once
+ *   - Priority levels: High / Medium / Low with colour coding
+ *   - Target times and reminders with lead-time setting
+ *   - Browser desktop notifications
+ *   - ntfy.sh push notifications to phone
+ *   - Completion history grouped by date
+ *   - Streak counter and progress bar
+ *   - Private (personal) vs work task flag
+ *   - localStorage persistence
+ */
+
 // ─── Data Layer ────────────────────────────────────────────────────────────────
 const TASKS_KEY = 'dt_tasks';
 const COMPLETIONS_KEY = 'dt_completions';
@@ -1828,6 +1899,71 @@ function updateNtfyToggle() {
   // just UI feedback, saved on Save
 }
 
+const CHANGELOG = [
+  { version: '1.6.0', date: '2026-03-10', items: [
+    'ntfy notifications now play a sound (ding) on delivery',
+    'Test button shows real success/failure message',
+    'Test reads topic directly from input — no Save required first',
+  ]},
+  { version: '1.5.0', date: '2026-03-10', items: [
+    'History entries tagged as 🏢 Work or 🔒 Personal',
+    'Work / Personal filter buttons added to History view',
+    'Old completions resolved via task\'s private flag',
+  ]},
+  { version: '1.4.0', date: '2026-03-10', items: [
+    'Full mobile / touch-screen layout',
+    'Modals slide up as bottom sheets on small screens',
+    'Task buttons always visible on touch devices',
+    'Bigger tap targets and stacked form rows on mobile',
+  ]},
+  { version: '1.3.0', date: '2026-03-10', items: [
+    'GitHub sync — data saved to repo, works on any device',
+    'Auto-saves 8 seconds after any change',
+    'Open Existing File option for local file persistence',
+  ]},
+  { version: '1.2.0', date: '2026-03-10', items: [
+    'Hosted on GitHub Pages (HTTPS)',
+    'Hourly auto-commit & push via scheduled task',
+  ]},
+  { version: '1.1.0', date: '2026-03-09', items: [
+    'File System Access API: auto-save to local .json file',
+    '💾 button with green/orange status dot in header',
+  ]},
+  { version: '1.0.0', date: '2026-03-09', items: [
+    'Initial release',
+    'Today / Tomorrow / History / Schedule tabs',
+    'Recurring tasks: daily, weekdays, weekly, monthly, once',
+    'Priority levels, target times, reminders',
+    'Browser and ntfy.sh push notifications',
+    'Completion history, streak counter, progress bar',
+    'Private (personal) vs work task flag',
+  ]},
+];
+
+let changelogOpen = false;
+
+function toggleChangelog() {
+  changelogOpen = !changelogOpen;
+  const body = document.getElementById('changelogBody');
+  const arrow = document.getElementById('changelogArrow');
+  if (!body || !arrow) return;
+  arrow.classList.toggle('open', changelogOpen);
+  body.style.display = changelogOpen ? 'block' : 'none';
+  if (changelogOpen && !body.innerHTML) {
+    body.innerHTML = CHANGELOG.map((entry, i) => `
+      <div style="margin-bottom:14px">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+          <span style="font-size:13px;font-weight:700;color:var(--primary)">v${entry.version}</span>
+          ${i === 0 ? '<span style="font-size:11px;font-weight:700;background:var(--primary);color:white;padding:1px 7px;border-radius:10px">Latest</span>' : ''}
+          <span style="font-size:11px;color:var(--text-muted)">${entry.date}</span>
+        </div>
+        <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px">
+          ${entry.items.map(item => `<li style="font-size:13px;color:var(--text-muted)">${item}</li>`).join('')}
+        </ul>
+      </div>`).join('');
+  }
+}
+
 function openSettings() {
   const s = loadSettings();
   document.getElementById('ntfyEnabled').checked = !!s.ntfyEnabled;
@@ -1836,6 +1972,11 @@ function openSettings() {
   updateBrowserNotifStatus();
   updateFileModalSection();
   updateGitHubModalSection();
+  // Version footer
+  const vf = document.getElementById('versionFooter');
+  if (vf) vf.textContent = `My Day v${APP_VERSION}`;
+  const vb = document.getElementById('versionBadge');
+  if (vb) vb.textContent = `v${APP_VERSION}`;
   document.getElementById('settingsOverlay').classList.add('open');
 }
 
