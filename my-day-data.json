@@ -301,6 +301,15 @@
       "date": "2026-03-10",
       "priority": "low",
       "recurrence": "once"
+    },
+    {
+      "id": "elnrxbfbt0jmmknybsw",
+      "taskId": "xu4y24s734mmkn2mrn",
+      "taskTitle": "Rename 2 Conversion Quality Forms",
+      "completedAt": "2026-03-10T13:46:17.792Z",
+      "date": "2026-03-10",
+      "priority": "low",
+      "recurrence": "once"
     }
   ],
   "settings": {
@@ -308,5 +317,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T13:39:45.476Z"
+  "savedAt": "2026-03-10T13:46:26.175Z"
 }
