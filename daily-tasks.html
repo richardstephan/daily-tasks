@@ -1888,7 +1888,8 @@ function sendNtfyNotif(task) {
       'Content-Type': 'text/plain',
       'Title': `Task Due: ${task.title}`,
       'Tags': 'alarm_clock',
-      'Priority': prio
+      'Priority': prio,
+      'Sound': 'ding'
     },
     body: (task.notes ? task.notes + '\n' : '') + `Target time: ${fmtTime12(task.targetTime)}`
   }).catch(() => {});
@@ -1916,7 +1917,8 @@ async function testNotification() {
         'Content-Type': 'text/plain',
         'Title': 'Test Reminder',
         'Tags': 'alarm_clock',
-        'Priority': '3'
+        'Priority': '3',
+        'Sound': 'ding'
       },
       body: 'This is a test notification from My Day app'
     });
