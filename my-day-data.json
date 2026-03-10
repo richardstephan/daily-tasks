@@ -180,7 +180,7 @@
     },
     {
       "id": "oidw5ozwe2mmkn5p4k",
-      "title": "Update Matics Files",
+      "title": "Update Matics Files and approve new jobs",
       "notes": "",
       "targetTime": "",
       "notify": false,
@@ -299,5 +299,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T13:24:10.373Z"
+  "savedAt": "2026-03-10T13:35:00.800Z"
 }
