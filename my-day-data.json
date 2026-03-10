@@ -205,6 +205,20 @@
       "active": true,
       "createdAt": "2026-03-10T13:52:53.658Z",
       "specificDate": "2026-03-10"
+    },
+    {
+      "id": "641c3f6ududmmkombq5",
+      "title": "Update monthly VOC Reports for EPA",
+      "notes": "",
+      "targetTime": "",
+      "notify": true,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "monthly",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-10T14:04:57.437Z",
+      "dayOfMonth": 10
     }
   ],
   "completions": [
@@ -351,5 +365,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T14:03:17.116Z"
+  "savedAt": "2026-03-10T14:05:05.825Z"
 }
