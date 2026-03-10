@@ -1456,6 +1456,15 @@ function renderHistory() {
   const t = today();
   const now = new Date();
 
+  // Build task lookup to resolve category for old completions that pre-date the category field
+  const taskMap = {};
+  loadTasks().forEach(t => { taskMap[t.id] = t; });
+  const resolveCategory = c => {
+    if (c.category) return c.category;
+    const task = taskMap[c.taskId];
+    return (task && task.private) ? 'personal' : 'work';
+  };
+
   let filtered = allCompletions.filter(c => {
     if (search && !c.taskTitle.toLowerCase().includes(search)) return false;
     if (historyFilter === 'today') { if (c.date !== t) return false; }
@@ -1467,8 +1476,9 @@ function renderHistory() {
       const d = dateFromStr(c.date);
       if (d.getMonth() !== now.getMonth() || d.getFullYear() !== now.getFullYear()) return false;
     }
-    if (historyCategoryFilter === 'work')     { if ((c.category || 'work') !== 'work')     return false; }
-    if (historyCategoryFilter === 'personal') { if ((c.category || 'work') !== 'personal') return false; }
+    const cat = resolveCategory(c);
+    if (historyCategoryFilter === 'work'     && cat !== 'work')     return false;
+    if (historyCategoryFilter === 'personal' && cat !== 'personal') return false;
     return true;
   });
 
@@ -1491,19 +1501,22 @@ function renderHistory() {
   container.innerHTML = Object.keys(grouped).sort().reverse().map(date => `
     <div class="date-group">
       <div class="date-label">${formatDateShort(date)} · ${grouped[date].length} task${grouped[date].length!==1?'s':''}</div>
-      ${grouped[date].map(c => `
+      ${grouped[date].map(c => {
+        const cat = resolveCategory(c);
+        return `
         <div class="history-card">
           <span class="check-icon">✅</span>
           <div style="flex:1;min-width:0">
             <div class="history-title">${escHtml(c.taskTitle)}</div>
             <div style="margin-top:3px">
-              ${(c.category || 'work') === 'personal'
+              ${cat === 'personal'
                 ? `<span class="tag tag-personal">🔒 Personal</span>`
                 : `<span class="tag tag-work">🏢 Work</span>`}
             </div>
           </div>
           <div class="history-time">${formatTime(c.completedAt)}</div>
-        </div>`).join('')}
+        </div>`;
+      }).join('')}
     </div>`).join('');
 }
 
