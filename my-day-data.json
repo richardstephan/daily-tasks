@@ -223,6 +223,24 @@
       "date": "2026-03-09",
       "priority": "high",
       "recurrence": "daily"
+    },
+    {
+      "id": "x0ttn3zmq6mmkgz7yq",
+      "taskId": "xbe58ihyegbmmjrqnyv",
+      "taskTitle": "Zoey",
+      "completedAt": "2026-03-10T10:31:02.162Z",
+      "date": "2026-03-10",
+      "priority": "high",
+      "recurrence": "weekdays"
+    },
+    {
+      "id": "6jln7s3zyujmmkgzbaz",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-10T10:31:06.491Z",
+      "date": "2026-03-10",
+      "priority": "high",
+      "recurrence": "daily"
     }
   ],
   "settings": {
@@ -230,5 +248,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T02:05:15.522Z"
+  "savedAt": "2026-03-10T10:31:15.166Z"
 }
