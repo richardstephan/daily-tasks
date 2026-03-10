@@ -358,6 +358,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "h79jxpn01cmmkpk456",
+      "taskId": "641c3f6ududmmkombq5",
+      "taskTitle": "Update monthly VOC Reports for EPA",
+      "completedAt": "2026-03-10T14:31:13.914Z",
+      "date": "2026-03-10",
+      "priority": "low",
+      "recurrence": "monthly",
+      "category": "work"
     }
   ],
   "settings": {
@@ -365,5 +375,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T14:05:05.825Z"
+  "savedAt": "2026-03-10T14:31:22.642Z"
 }
