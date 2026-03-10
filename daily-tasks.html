@@ -155,6 +155,8 @@
     .notify-check-label { font-size: 13px; font-weight: 600; color: var(--text); }
     .tag-notify { background: #eff6ff; color: #2563eb; }
     .tag-private { background: #f0fdf4; color: #065f46; }
+    .tag-work { background: #eff6ff; color: #1d4ed8; }
+    .tag-personal { background: #f0fdf4; color: #065f46; }
 
     /* Nav */
     .nav {
@@ -925,6 +927,11 @@
       <button class="filter-btn" onclick="setHistoryFilter('month', this)">This Month</button>
       <input type="text" class="search-box" placeholder="Search..." oninput="renderHistory()" id="historySearch">
     </div>
+    <div class="filters" id="historyCategoryFilters" style="margin-top:-4px;margin-bottom:16px">
+      <button class="filter-btn active" onclick="setHistoryCategoryFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setHistoryCategoryFilter('work', this)">🏢 Work</button>
+      <button class="filter-btn" onclick="setHistoryCategoryFilter('personal', this)">🔒 Personal</button>
+    </div>
 
     <div id="historyList"></div>
   </div>
@@ -1235,6 +1242,7 @@ function getTomorrowTasks() {
 // ─── State ─────────────────────────────────────────────────────────────────────
 let editingTaskId = null;
 let historyFilter = 'all';
+let historyCategoryFilter = 'all';
 let schedFilter = 'all';
 let completedTodayOpen = false;
 let todayFilter = 'all';
@@ -1384,7 +1392,8 @@ function toggleTask(taskId) {
       completedAt: new Date().toISOString(),
       date: t,
       priority: task ? task.priority : 'low',
-      recurrence: task ? task.recurrence : 'once'
+      recurrence: task ? task.recurrence : 'once',
+      category: task ? (task.private ? 'personal' : 'work') : 'work'
     });
     showToast('Task completed! ✓', 'success');
   } else {
@@ -1449,16 +1458,17 @@ function renderHistory() {
 
   let filtered = allCompletions.filter(c => {
     if (search && !c.taskTitle.toLowerCase().includes(search)) return false;
-    if (historyFilter === 'today') return c.date === t;
-    if (historyFilter === 'week') {
+    if (historyFilter === 'today') { if (c.date !== t) return false; }
+    else if (historyFilter === 'week') {
       const d = dateFromStr(c.date);
       const diff = (now - d) / (1000*60*60*24);
-      return diff < 7;
-    }
-    if (historyFilter === 'month') {
+      if (diff >= 7) return false;
+    } else if (historyFilter === 'month') {
       const d = dateFromStr(c.date);
-      return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+      if (d.getMonth() !== now.getMonth() || d.getFullYear() !== now.getFullYear()) return false;
     }
+    if (historyCategoryFilter === 'work')     { if ((c.category || 'work') !== 'work')     return false; }
+    if (historyCategoryFilter === 'personal') { if ((c.category || 'work') !== 'personal') return false; }
     return true;
   });
 
@@ -1484,8 +1494,13 @@ function renderHistory() {
       ${grouped[date].map(c => `
         <div class="history-card">
           <span class="check-icon">✅</span>
-          <div>
+          <div style="flex:1;min-width:0">
             <div class="history-title">${escHtml(c.taskTitle)}</div>
+            <div style="margin-top:3px">
+              ${(c.category || 'work') === 'personal'
+                ? `<span class="tag tag-personal">🔒 Personal</span>`
+                : `<span class="tag tag-work">🏢 Work</span>`}
+            </div>
           </div>
           <div class="history-time">${formatTime(c.completedAt)}</div>
         </div>`).join('')}
@@ -1508,7 +1523,14 @@ function setTomorrowFilter(f, el) {
 
 function setHistoryFilter(f, el) {
   historyFilter = f;
-  document.querySelectorAll('#view-history .filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#view-history .filters:first-of-type .filter-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderHistory();
+}
+
+function setHistoryCategoryFilter(f, el) {
+  historyCategoryFilter = f;
+  document.querySelectorAll('#historyCategoryFilters .filter-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
   renderHistory();
 }
