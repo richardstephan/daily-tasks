@@ -219,6 +219,20 @@
       "active": true,
       "createdAt": "2026-03-10T14:04:57.437Z",
       "dayOfMonth": 10
+    },
+    {
+      "id": "ihev1kw3sokmmkpn36w",
+      "title": "PN to IF AS-400 Conversion Kickoff meeting",
+      "notes": "",
+      "targetTime": "15:00",
+      "notify": true,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-10T14:33:32.648Z",
+      "specificDate": "2026-03-10"
     }
   ],
   "completions": [
@@ -375,5 +389,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T14:31:22.642Z"
+  "savedAt": "2026-03-10T14:33:41.029Z"
 }
