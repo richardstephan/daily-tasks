@@ -382,6 +382,16 @@
       "priority": "low",
       "recurrence": "monthly",
       "category": "work"
+    },
+    {
+      "id": "g300pri0l2mmkrdba7",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-10T15:21:55.807Z",
+      "date": "2026-03-10",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -389,5 +399,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-10T14:43:43.206Z"
+  "savedAt": "2026-03-10T15:22:04.244Z"
 }
