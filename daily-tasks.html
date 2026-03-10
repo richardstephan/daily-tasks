@@ -711,12 +711,88 @@
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { background: var(--success); }
 
-    /* Responsive */
+    /* ── Mobile / Touch ───────────────────────────────────────────────────────── */
+
+    /* Always show task actions on touch screens (no hover available) */
+    @media (hover: none) {
+      .task-actions { opacity: 1; }
+    }
+
     @media (max-width: 600px) {
-      .header { padding: 0 16px; }
-      .nav { padding: 0 12px; }
-      .main { padding: 16px 12px; }
-      .stats-bar { gap: 8px; padding: 12px; }
+      /* Header */
+      .header { padding: 0 12px; height: 54px; }
+      .app-title { font-size: 16px; }
+      .today-badge { display: none; }
+      .header-date { display: none; }
+      .header-greeting { font-size: 13px; max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+      /* Nav tabs */
+      .nav { padding: 0 6px; }
+      .nav-btn { padding: 11px 10px; font-size: 13px; gap: 4px; }
+
+      /* Main content */
+      .main { padding: 14px 12px; }
+
+      /* Stats bar */
+      .stats-bar { gap: 8px; padding: 10px 12px; }
+      .stat-num { font-size: 20px; }
+
+      /* Task cards — bigger tap targets, always show actions */
+      .task-card { padding: 12px 12px; }
+      .task-actions { opacity: 1; }
+      .btn-icon { width: 34px; height: 34px; font-size: 14px; }
+      .task-check { width: 26px; height: 26px; }
+
+      /* Section header */
+      .section-header { margin-bottom: 12px; }
+      .btn-add { padding: 9px 14px; font-size: 14px; }
+
+      /* Form rows stack vertically on mobile */
+      .form-row { flex-direction: column; gap: 0; }
+
+      /* Day picker fits on one row */
+      .day-picker { gap: 5px; }
+      .day-opt label { width: 36px; height: 36px; font-size: 12px; }
+
+      /* Modal slides up from bottom as a sheet */
+      .modal-overlay { align-items: flex-end; padding: 0; }
+      .modal {
+        border-radius: 20px 20px 0 0;
+        max-height: 88vh;
+        max-width: 100%;
+        transform: translateY(30px);
+      }
+      .modal-overlay.open .modal { transform: translateY(0); }
+      .modal-header { padding: 16px 16px 12px; }
+      .modal-body { padding: 16px 16px; }
+      .modal-footer { padding: 12px 16px; }
+
+      /* Settings rows wrap on narrow screens */
+      .setting-row { flex-wrap: wrap; gap: 8px; }
+
+      /* Filters */
+      .filters { gap: 6px; }
+      .filter-btn { padding: 6px 10px; font-size: 12px; }
+
+      /* History cards */
+      .history-card { padding: 10px 12px; }
+
+      /* Schedule cards */
+      .sched-card { padding: 12px 12px; }
+
+      /* Toast — centred at bottom edge */
+      .toast { left: 12px; right: 12px; bottom: 16px; text-align: center; }
+
+      /* GitHub sync button row wraps */
+      .gh-btn-row { flex-wrap: wrap; }
+      .gh-btn-row button { flex: 1 1 auto; min-width: 0; font-size: 12px; padding: 8px 8px; }
+    }
+
+    @media (max-width: 380px) {
+      /* Very small phones */
+      .header-greeting { display: none; }
+      .nav-btn { padding: 10px 8px; font-size: 12px; }
+      .day-opt label { width: 32px; height: 32px; font-size: 11px; }
     }
   </style>
 </head>
@@ -2167,7 +2243,7 @@ function updateGitHubModalSection() {
         <input id="ghRepoInput" type="text" placeholder="Repo name" value="${repo}"
           style="flex:1;padding:8px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;background:var(--surface);color:var(--text)">
       </div>
-      <div style="display:flex;gap:8px">
+      <div class="gh-btn-row" style="display:flex;gap:8px">
         <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="saveGitHubConfig()">Save &amp; Connect</button>
         <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="syncNowFromGitHub()">↓ Load from GitHub</button>
         <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;flex:1" onclick="doGitHubSave().then(()=>showToast('Saved! ✓','success'))">↑ Push to GitHub</button>
