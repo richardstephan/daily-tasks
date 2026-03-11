@@ -247,6 +247,20 @@
       "active": true,
       "createdAt": "2026-03-11T15:35:38.790Z",
       "specificDate": "2026-03-11"
+    },
+    {
+      "id": "dd10czwofqmmm7qx31",
+      "title": "Floorplan to IF team",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-11T15:48:10.621Z",
+      "specificDate": "2026-03-11"
     }
   ],
   "completions": [
@@ -463,5 +477,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T15:35:47.251Z"
+  "savedAt": "2026-03-11T15:48:19.127Z"
 }
