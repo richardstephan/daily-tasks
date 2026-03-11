@@ -548,6 +548,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "pybfrr4x62kmmmao84k",
+      "taskId": "twplowmzstqmmm8fb4t",
+      "taskTitle": "Matics Information to PN to IF Team",
+      "completedAt": "2026-03-11T17:10:03.812Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -555,5 +565,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T17:01:32.889Z"
+  "savedAt": "2026-03-11T17:10:12.380Z"
 }
