@@ -275,6 +275,20 @@
       "active": true,
       "createdAt": "2026-03-11T16:07:08.573Z",
       "specificDate": "2026-03-11"
+    },
+    {
+      "id": "n0f5etag4vqmmmad1kk",
+      "title": "Send and explain Web Master Excel Sheet to PN to IF Team",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-11T17:01:22.100Z",
+      "specificDate": "2026-03-11"
     }
   ],
   "completions": [
@@ -524,6 +538,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "mn2avyzjuyommmad3c0",
+      "taskId": "n0f5etag4vqmmmad1kk",
+      "taskTitle": "Send and explain Web Master Excel Sheet to PN to IF Team",
+      "completedAt": "2026-03-11T17:01:24.384Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -531,5 +555,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T16:07:17.088Z"
+  "savedAt": "2026-03-11T17:01:32.889Z"
 }
