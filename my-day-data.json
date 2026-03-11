@@ -432,6 +432,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "personal"
+    },
+    {
+      "id": "w6dm58lrl5mmm0nm8s",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-11T12:29:39.292Z",
+      "date": "2026-03-11",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -439,5 +449,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T12:00:01.774Z"
+  "savedAt": "2026-03-11T12:29:47.600Z"
 }
