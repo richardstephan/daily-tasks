@@ -236,7 +236,7 @@
     },
     {
       "id": "lv24lol2fhdmmm7asyu",
-      "title": "Bintec email to team",
+      "title": "Bintec email to PN to IF Corporate Team",
       "notes": "",
       "targetTime": "",
       "notify": false,
@@ -470,6 +470,16 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "xvc7z91qlapmmm8caer",
+      "taskId": "lv24lol2fhdmmm7asyu",
+      "taskTitle": "Bintec email to PN to IF Corporate Team",
+      "completedAt": "2026-03-11T16:04:47.667Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -477,5 +487,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T15:50:26.785Z"
+  "savedAt": "2026-03-11T16:04:56.080Z"
 }
