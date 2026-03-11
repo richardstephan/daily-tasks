@@ -572,6 +572,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "jzy3s6kisjlmmmayq09",
+      "taskId": "7m13r17n5vmmmmaouy0",
+      "taskTitle": "Update Graco PO to Prattville which had the wrong amount!",
+      "completedAt": "2026-03-11T17:18:13.545Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -579,5 +589,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T17:10:41.597Z"
+  "savedAt": "2026-03-11T17:18:21.961Z"
 }
