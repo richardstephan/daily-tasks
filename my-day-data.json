@@ -596,6 +596,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "nsyjb7pl37mmmbpe0n",
+      "taskId": "taeljqqlpimmmbo9c9",
+      "taskTitle": "Add Graco to the Outsource Sheet",
+      "completedAt": "2026-03-11T17:38:57.719Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -603,5 +613,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T17:38:13.467Z"
+  "savedAt": "2026-03-11T17:39:06.012Z"
 }
