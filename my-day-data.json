@@ -331,6 +331,20 @@
       "active": true,
       "createdAt": "2026-03-11T18:45:57.222Z",
       "specificDate": "2026-03-11"
+    },
+    {
+      "id": "tpac06dkl7emmmhr1vj",
+      "title": "Working on Wip Storage Software as we are now starting to use the wip rack",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-11T20:28:12.991Z",
+      "specificDate": "2026-03-11"
     }
   ],
   "completions": [
@@ -637,5 +651,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T19:15:33.478Z"
+  "savedAt": "2026-03-11T20:28:21.446Z"
 }
