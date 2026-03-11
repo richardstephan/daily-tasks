@@ -654,6 +654,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "l19bkk3wi49mmmp124n",
+      "taskId": "a8zj2zn1z86mmjm4vai",
+      "taskTitle": "Flowmax",
+      "completedAt": "2026-03-11T23:51:57.191Z",
+      "date": "2026-03-11",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -661,5 +671,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T23:51:03.936Z"
+  "savedAt": "2026-03-11T23:52:05.564Z"
 }
