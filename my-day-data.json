@@ -250,7 +250,7 @@
     },
     {
       "id": "dd10czwofqmmm7qx31",
-      "title": "Floorplan to IF team",
+      "title": "Floorplan to PN to IF team",
       "notes": "",
       "targetTime": "",
       "notify": false,
@@ -480,6 +480,36 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "bmdc1u4ohrwmmm8eb4n",
+      "taskId": "dd10czwofqmmm7qx31",
+      "taskTitle": "Floorplan to PN to IF team",
+      "completedAt": "2026-03-11T16:06:21.911Z",
+      "date": "2026-03-11",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
+    },
+    {
+      "id": "v4eu7jvpndammm8ef0y",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-11T16:06:26.962Z",
+      "date": "2026-03-11",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "o5yl9qefvommm8egrj",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-11T16:06:29.215Z",
+      "date": "2026-03-11",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -487,5 +517,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-11T16:04:56.080Z"
+  "savedAt": "2026-03-11T16:06:37.653Z"
 }
