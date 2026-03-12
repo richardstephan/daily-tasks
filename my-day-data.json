@@ -346,6 +346,20 @@
       "active": true,
       "createdAt": "2026-03-12T17:00:27.344Z",
       "specificDate": "2026-03-12"
+    },
+    {
+      "id": "jhp07z0cdv9mmnsz1ec",
+      "title": "Trying to make a Android Lenovo work as WIP Entry Table",
+      "notes": "Failed as Camera does not read codes",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-12T18:30:07.572Z",
+      "specificDate": "2026-03-12"
     }
   ],
   "completions": [
@@ -695,6 +709,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "0vphizxawyrmmnsz38m",
+      "taskId": "jhp07z0cdv9mmnsz1ec",
+      "taskTitle": "Trying to make a Android Lenovo work as WIP Entry Table",
+      "completedAt": "2026-03-12T18:30:09.958Z",
+      "date": "2026-03-12",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -702,5 +726,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-12T17:00:35.696Z"
+  "savedAt": "2026-03-12T18:30:18.379Z"
 }
