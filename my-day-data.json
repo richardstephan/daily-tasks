@@ -332,6 +332,20 @@
       "active": true,
       "createdAt": "2026-03-11T20:28:12.991Z",
       "specificDate": "2026-03-11"
+    },
+    {
+      "id": "mspj7g1vbemmnprpzk",
+      "title": "Retain Log",
+      "notes": "Evaluate a better way to enter the retain log, possibly move to a web based entry form? Requested by Jennifer",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "medium",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-12T17:00:27.344Z",
+      "specificDate": "2026-03-12"
     }
   ],
   "completions": [
@@ -688,5 +702,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-12T16:58:49.585Z"
+  "savedAt": "2026-03-12T17:00:35.696Z"
 }
