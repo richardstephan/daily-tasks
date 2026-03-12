@@ -661,6 +661,26 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "k4la43zq4fmmnppf20",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-12T16:58:39.864Z",
+      "date": "2026-03-12",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "x4nliscl7ymmnppgcs",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-12T16:58:41.548Z",
+      "date": "2026-03-12",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -668,5 +688,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-12T12:25:51.241Z"
+  "savedAt": "2026-03-12T16:58:49.585Z"
 }
