@@ -124,19 +124,6 @@
       "specificDate": "2026-03-09"
     },
     {
-      "id": "xbe58ihyegbmmjrqnyv",
-      "title": "Zoey",
-      "notes": "",
-      "targetTime": "06:25",
-      "notify": true,
-      "webLink": "",
-      "priority": "high",
-      "recurrence": "weekdays",
-      "private": true,
-      "active": true,
-      "createdAt": "2026-03-09T22:44:32.599Z"
-    },
-    {
       "id": "xu4y24s734mmkn2mrn",
       "title": "Rename 2 Conversion Quality Forms",
       "notes": "",
@@ -664,6 +651,16 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "rik341y162mmnfy80d",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-12T12:25:34.477Z",
+      "date": "2026-03-12",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -671,5 +668,5 @@
     "ntfyTopic": "richard-tasks-7824",
     "leadTime": 10
   },
-  "savedAt": "2026-03-12T12:24:43.073Z"
+  "savedAt": "2026-03-12T12:25:51.241Z"
 }
