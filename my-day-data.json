@@ -360,6 +360,20 @@
       "active": true,
       "createdAt": "2026-03-12T18:30:07.572Z",
       "specificDate": "2026-03-12"
+    },
+    {
+      "id": "aeujllusn0qmmp7d6ma",
+      "title": "Transfer Job Data to Matics as Press needs a recently entered Job",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-13T18:00:48.322Z",
+      "specificDate": "2026-03-13"
     }
   ],
   "completions": [
@@ -756,5 +770,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-13T18:00:23.533Z"
+  "savedAt": "2026-03-13T18:00:56.703Z"
 }
