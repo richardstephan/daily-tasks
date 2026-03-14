@@ -388,6 +388,20 @@
       "active": true,
       "createdAt": "2026-03-13T19:18:28.386Z",
       "specificDate": "2026-03-13"
+    },
+    {
+      "id": "pq0r9a96zbmmqikjyo",
+      "title": "Build Ikea Shelf for Toni",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-14T16:02:14.160Z",
+      "specificDate": "2026-03-14"
     }
   ],
   "completions": [
@@ -804,5 +818,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-14T16:01:49.812Z"
+  "savedAt": "2026-03-14T16:02:22.500Z"
 }
