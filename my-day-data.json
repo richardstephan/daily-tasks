@@ -903,6 +903,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "vew6lut539ommtjx655",
+      "taskId": "njqe7q0yklimmtis6w1",
+      "taskTitle": "Update Rental search for Cindy",
+      "completedAt": "2026-03-16T19:03:20.921Z",
+      "date": "2026-03-16",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -910,5 +920,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-16T18:31:37.446Z"
+  "savedAt": "2026-03-16T19:03:29.398Z"
 }
