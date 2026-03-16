@@ -444,6 +444,20 @@
       "active": true,
       "createdAt": "2026-03-16T18:31:28.993Z",
       "specificDate": "2026-03-16"
+    },
+    {
+      "id": "nugeaiyy9tkmmtnl067",
+      "title": "Bring Remaining Bags from Huson Sharp Trial from Cent to BR",
+      "notes": "",
+      "targetTime": "08:30",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-16T20:45:51.775Z",
+      "specificDate": "2026-03-17"
     }
   ],
   "completions": [
@@ -930,5 +944,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-16T19:22:39.849Z"
+  "savedAt": "2026-03-16T20:46:00.231Z"
 }
