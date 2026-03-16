@@ -402,6 +402,20 @@
       "active": true,
       "createdAt": "2026-03-14T16:02:14.160Z",
       "specificDate": "2026-03-14"
+    },
+    {
+      "id": "g6dt2vq66tmmtif0n2",
+      "title": "Fix Read Errors with new Scanner",
+      "notes": "Had to fix the software for the reader as it omits the - with a blank. Works now!",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-16T18:21:14.366Z",
+      "specificDate": "2026-03-16"
     }
   ],
   "completions": [
@@ -821,6 +835,36 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "if1f8gosv1emmtif2dg",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-16T18:21:16.612Z",
+      "date": "2026-03-16",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "m97mugv61fmmmtif57e",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-16T18:21:20.282Z",
+      "date": "2026-03-16",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
+    },
+    {
+      "id": "aga5j5t09wemmtif6xc",
+      "taskId": "g6dt2vq66tmmtif0n2",
+      "taskTitle": "Fix Read Errors with new Scanner",
+      "completedAt": "2026-03-16T18:21:22.512Z",
+      "date": "2026-03-16",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -828,5 +872,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-14T16:02:30.899Z"
+  "savedAt": "2026-03-16T18:21:30.857Z"
 }
