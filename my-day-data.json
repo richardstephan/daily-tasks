@@ -937,6 +937,36 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "wv5evabafhjmmuwmwhb",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-17T17:47:03.023Z",
+      "date": "2026-03-17",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "x3emg8zaiammuwmy5b",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-17T17:47:05.183Z",
+      "date": "2026-03-17",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
+    },
+    {
+      "id": "0otg2v59fjommuwmzf7",
+      "taskId": "nugeaiyy9tkmmtnl067",
+      "taskTitle": "Bring Remaining Bags from Huson Sharp Trial from Cent to BR",
+      "completedAt": "2026-03-17T17:47:06.835Z",
+      "date": "2026-03-17",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -944,5 +974,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-16T20:46:35.122Z"
+  "savedAt": "2026-03-17T17:47:14.956Z"
 }
