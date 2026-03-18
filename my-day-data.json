@@ -500,6 +500,20 @@
       "active": true,
       "createdAt": "2026-03-18T17:32:51.633Z",
       "specificDate": "2026-03-18"
+    },
+    {
+      "id": "3yv6w6dqomemmwe3d1c",
+      "title": "Claude Code Daily Controlled Document Web cleanup with Web todo list creation",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-18T18:43:30.624Z",
+      "specificDate": "2026-03-18"
     }
   ],
   "completions": [
@@ -1076,5 +1090,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-18T17:36:20.852Z"
+  "savedAt": "2026-03-18T18:43:39.122Z"
 }
