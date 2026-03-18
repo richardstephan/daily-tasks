@@ -527,7 +527,7 @@
       "private": false,
       "active": true,
       "createdAt": "2026-03-18T20:32:50.482Z",
-      "specificDate": "2026-03-18"
+      "specificDate": "2026-03-19"
     },
     {
       "id": "7alxw3sqztmmmwi2z7y",
@@ -1138,5 +1138,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-18T21:21:36.525Z"
+  "savedAt": "2026-03-18T21:32:12.999Z"
 }
