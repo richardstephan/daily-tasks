@@ -458,6 +458,20 @@
       "active": true,
       "createdAt": "2026-03-16T20:45:51.775Z",
       "specificDate": "2026-03-17"
+    },
+    {
+      "id": "3d4e374jv0fmmwaxzq8",
+      "title": "Order 42.25 2.25 Flowers film",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-18T17:15:21.248Z",
+      "specificDate": "2026-03-18"
     }
   ],
   "completions": [
@@ -977,6 +991,36 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "paaxas6vc1fmmway2oy",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-18T17:15:25.090Z",
+      "date": "2026-03-18",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
+    },
+    {
+      "id": "tgcr6oj60rammway42s",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-18T17:15:26.884Z",
+      "date": "2026-03-18",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "ldx4bhgc6rqmmway4wg",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-18T17:15:27.952Z",
+      "date": "2026-03-18",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -984,5 +1028,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-17T17:47:33.037Z"
+  "savedAt": "2026-03-18T17:15:36.073Z"
 }
