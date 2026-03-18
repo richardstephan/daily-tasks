@@ -541,7 +541,7 @@
       "private": false,
       "active": true,
       "createdAt": "2026-03-18T20:35:11.182Z",
-      "specificDate": "2026-03-18"
+      "specificDate": "2026-03-19"
     }
   ],
   "completions": [
@@ -1138,5 +1138,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-18T20:35:19.608Z"
+  "savedAt": "2026-03-18T21:21:36.525Z"
 }
