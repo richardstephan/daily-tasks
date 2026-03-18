@@ -472,6 +472,20 @@
       "active": true,
       "createdAt": "2026-03-18T17:15:21.248Z",
       "specificDate": "2026-03-18"
+    },
+    {
+      "id": "ta49ua1hzjqmmwazces",
+      "title": "Fix weight control on extrusion  jobs N26a095-1",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-18T17:16:24.340Z",
+      "specificDate": "2026-03-18"
     }
   ],
   "completions": [
@@ -1028,5 +1042,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-18T17:15:36.073Z"
+  "savedAt": "2026-03-18T17:16:32.824Z"
 }
