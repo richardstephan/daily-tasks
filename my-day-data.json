@@ -542,6 +542,20 @@
       "active": true,
       "createdAt": "2026-03-18T20:35:11.182Z",
       "specificDate": "2026-03-19"
+    },
+    {
+      "id": "f3uy6c9jiosmmxcyicc",
+      "title": "Arrange PLC installation into new Flatbed",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-19T10:59:30.780Z",
+      "specificDate": "2026-03-19"
     }
   ],
   "completions": [
@@ -1158,5 +1172,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-19T00:42:09.557Z"
+  "savedAt": "2026-03-19T10:59:38.788Z"
 }
