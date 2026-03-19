@@ -1277,6 +1277,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "nx8u4t36gummxrfg2d",
+      "taskId": "eq68y8lthlemmxrbh3b",
+      "taskTitle": "IEF Schedule & Min max not updated since 2/28",
+      "completedAt": "2026-03-19T17:44:35.605Z",
+      "date": "2026-03-19",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1284,5 +1294,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-19T17:44:30.397Z"
+  "savedAt": "2026-03-19T17:44:43.770Z"
 }
