@@ -1195,6 +1195,26 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "jbbm4jhfcjkmmxptcnj",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-19T16:59:25.135Z",
+      "date": "2026-03-19",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "ajujlk4lwzfmmxpte29",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-03-19T16:59:26.961Z",
+      "date": "2026-03-19",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1202,5 +1222,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-19T12:18:06.746Z"
+  "savedAt": "2026-03-19T16:59:35.002Z"
 }
