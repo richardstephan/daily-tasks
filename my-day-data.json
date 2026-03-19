@@ -556,6 +556,20 @@
       "active": true,
       "createdAt": "2026-03-19T10:59:30.780Z",
       "specificDate": "2026-03-19"
+    },
+    {
+      "id": "kgrsebuz7xbmmxptuvz",
+      "title": "Sealing Kaizen",
+      "notes": "",
+      "targetTime": "09:30",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-19T16:59:48.767Z",
+      "specificDate": "2026-03-19"
     }
   ],
   "completions": [
@@ -1222,5 +1236,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-19T16:59:35.002Z"
+  "savedAt": "2026-03-19T16:59:56.969Z"
 }
