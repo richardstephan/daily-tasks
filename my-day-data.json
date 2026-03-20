@@ -612,6 +612,20 @@
       "active": true,
       "createdAt": "2026-03-20T20:14:46.402Z",
       "specificDate": "2026-03-20"
+    },
+    {
+      "id": "xq80nxlwg2gmmzcr93w",
+      "title": "Enter OR02",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-20T20:29:24.572Z",
+      "specificDate": "2026-03-23"
     }
   ],
   "completions": [
@@ -1348,5 +1362,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-20T20:15:00.912Z"
+  "savedAt": "2026-03-20T20:29:33.242Z"
 }
