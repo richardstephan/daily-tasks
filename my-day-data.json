@@ -598,6 +598,20 @@
       "active": true,
       "createdAt": "2026-03-19T17:41:30.311Z",
       "specificDate": "2026-03-19"
+    },
+    {
+      "id": "y2q2zr6vbmmzc8fia",
+      "title": "Create Outsource Price sheet history",
+      "notes": "Used Claude Code, sent to Rick",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-20T20:14:46.402Z",
+      "specificDate": "2026-03-20"
     }
   ],
   "completions": [
@@ -1317,6 +1331,16 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "w6tql99ubb8mmzc8jyv",
+      "taskId": "y2q2zr6vbmmzc8fia",
+      "taskTitle": "Create Outsource Price sheet history",
+      "completedAt": "2026-03-20T20:14:52.183Z",
+      "date": "2026-03-20",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1324,5 +1348,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-20T20:13:33.820Z"
+  "savedAt": "2026-03-20T20:15:00.912Z"
 }
