@@ -1355,6 +1355,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "d3vceoknn15mmzmivqq",
+      "taskId": "a8zj2zn1z86mmjm4vai",
+      "taskTitle": "Flowmax",
+      "completedAt": "2026-03-21T01:02:50.162Z",
+      "date": "2026-03-20",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -1362,5 +1372,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-20T20:29:33.242Z"
+  "savedAt": "2026-03-21T01:02:59.579Z"
 }
