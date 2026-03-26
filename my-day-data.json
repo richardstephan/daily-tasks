@@ -1433,6 +1433,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "ilv660w5prkmn7yjxik",
+      "taskId": "clsnabxd79wmn7sy2in",
+      "taskTitle": "Order 2 Trucks 37.5 for Publix",
+      "completedAt": "2026-03-26T21:01:43.916Z",
+      "date": "2026-03-26",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1440,5 +1450,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-26T18:24:54.389Z"
+  "savedAt": "2026-03-26T21:01:52.407Z"
 }
