@@ -1409,6 +1409,16 @@
       "priority": "high",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "uysm9bpw3onmn7s315a",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-03-26T18:00:37.774Z",
+      "date": "2026-03-26",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1416,5 +1426,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-26T17:52:02.249Z"
+  "savedAt": "2026-03-26T18:00:46.189Z"
 }
