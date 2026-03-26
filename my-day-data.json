@@ -640,6 +640,20 @@
       "active": true,
       "createdAt": "2026-03-26T13:33:32.843Z",
       "specificDate": "2026-03-26"
+    },
+    {
+      "id": "clsnabxd79wmn7sy2in",
+      "title": "Order 2 Trucks 37.5 for Publix",
+      "notes": "Per Willie",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "once",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-26T18:24:45.887Z",
+      "specificDate": "2026-03-26"
     }
   ],
   "completions": [
@@ -1426,5 +1440,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-26T18:00:46.189Z"
+  "savedAt": "2026-03-26T18:24:54.389Z"
 }
