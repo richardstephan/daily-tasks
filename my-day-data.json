@@ -1399,6 +1399,16 @@
       "priority": "high",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "auv6oo16l0amn7rrss1",
+      "taskId": "nzcxilzawpmn7ijk8b",
+      "taskTitle": "Place Order for Sim's film. This is the first time since 2021",
+      "completedAt": "2026-03-26T17:51:53.713Z",
+      "date": "2026-03-26",
+      "priority": "high",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1406,5 +1416,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-26T13:33:41.324Z"
+  "savedAt": "2026-03-26T17:52:02.249Z"
 }
