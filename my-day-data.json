@@ -1457,6 +1457,16 @@
       "priority": "low",
       "recurrence": "once",
       "category": "work"
+    },
+    {
+      "id": "15497033fu9mn8uldtc",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-03-27T11:58:39.408Z",
+      "date": "2026-03-27",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -1464,5 +1474,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-26T21:02:16.621Z"
+  "savedAt": "2026-03-27T11:58:47.979Z"
 }
