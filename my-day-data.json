@@ -703,7 +703,7 @@
       "notify": false,
       "webLink": "",
       "priority": "low",
-      "recurrence": "once",
+      "recurrence": "weekdays",
       "private": false,
       "active": true,
       "createdAt": "2026-03-31T16:55:16.658Z",
@@ -1514,5 +1514,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-31T16:55:25.169Z"
+  "savedAt": "2026-03-31T16:55:34.227Z"
 }
