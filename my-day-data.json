@@ -677,10 +677,23 @@
       "notify": false,
       "webLink": "",
       "priority": "low",
-      "recurrence": "daily",
+      "recurrence": "weekdays",
       "private": false,
       "active": true,
       "createdAt": "2026-03-31T16:53:22.505Z"
+    },
+    {
+      "id": "iqvlkaewhxbmneuwmny",
+      "title": "Add Claude Code Projects to my HTA menu",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "weekdays",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-31T16:54:01.150Z"
     }
   ],
   "completions": [
@@ -1487,5 +1500,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-31T16:53:30.631Z"
+  "savedAt": "2026-03-31T16:54:15.491Z"
 }
