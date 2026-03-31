@@ -668,6 +668,19 @@
       "active": true,
       "createdAt": "2026-03-26T21:02:08.355Z",
       "specificDate": "2026-03-27"
+    },
+    {
+      "id": "7r88povhrjmneuvsuh",
+      "title": "Build a personnel tracker for Press",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "daily",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-03-31T16:53:22.505Z"
     }
   ],
   "completions": [
@@ -1474,5 +1487,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-27T11:58:47.979Z"
+  "savedAt": "2026-03-31T16:53:30.631Z"
 }
