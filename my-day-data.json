@@ -690,10 +690,11 @@
       "notify": false,
       "webLink": "",
       "priority": "low",
-      "recurrence": "weekdays",
+      "recurrence": "once",
       "private": false,
       "active": true,
-      "createdAt": "2026-03-31T16:54:01.150Z"
+      "createdAt": "2026-03-31T16:54:01.150Z",
+      "specificDate": "2026-03-31"
     },
     {
       "id": "mgjy841e5abmneuy8xe",
@@ -1564,5 +1565,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-04-01T01:13:35.447Z"
+  "savedAt": "2026-04-01T01:13:47.499Z"
 }
