@@ -677,10 +677,11 @@
       "notify": false,
       "webLink": "",
       "priority": "low",
-      "recurrence": "weekdays",
+      "recurrence": "once",
       "private": false,
       "active": true,
-      "createdAt": "2026-03-31T16:53:22.505Z"
+      "createdAt": "2026-03-31T16:53:22.505Z",
+      "specificDate": "2026-04-01"
     },
     {
       "id": "iqvlkaewhxbmneuwmny",
@@ -1588,6 +1589,16 @@
       "priority": "low",
       "recurrence": "monthly",
       "category": "work"
+    },
+    {
+      "id": "wk8e7nxzayamng38xed",
+      "taskId": "7r88povhrjmneuvsuh",
+      "taskTitle": "Build a personnel tracker for Press",
+      "completedAt": "2026-04-01T13:35:18.037Z",
+      "date": "2026-04-01",
+      "priority": "low",
+      "recurrence": "once",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1595,5 +1606,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-04-01T13:35:11.523Z"
+  "savedAt": "2026-04-01T13:35:27.192Z"
 }
