@@ -1558,6 +1558,36 @@
       "priority": "low",
       "recurrence": "weekdays",
       "category": "work"
+    },
+    {
+      "id": "ddyq0kuvup7mng38hb3",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-04-01T13:34:57.183Z",
+      "date": "2026-04-01",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "ah8qsf3ck7hmng38iyx",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-04-01T13:34:59.337Z",
+      "date": "2026-04-01",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
+    },
+    {
+      "id": "l3yz0lf16jomng38m5z",
+      "taskId": "0ew30qgiputqmmjn41e7",
+      "taskTitle": "Month Beginning Jobs",
+      "completedAt": "2026-04-01T13:35:03.479Z",
+      "date": "2026-04-01",
+      "priority": "low",
+      "recurrence": "monthly",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1565,5 +1595,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-04-01T01:13:47.499Z"
+  "savedAt": "2026-04-01T13:35:11.523Z"
 }
