@@ -1547,6 +1547,16 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "7p7e78ybk6umnfcqwod",
+      "taskId": "7r88povhrjmneuvsuh",
+      "taskTitle": "Build a personnel tracker for Press",
+      "completedAt": "2026-04-01T01:13:27.277Z",
+      "date": "2026-03-31",
+      "priority": "low",
+      "recurrence": "weekdays",
+      "category": "work"
     }
   ],
   "settings": {
@@ -1554,5 +1564,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-04-01T01:13:24.512Z"
+  "savedAt": "2026-04-01T01:13:35.447Z"
 }
