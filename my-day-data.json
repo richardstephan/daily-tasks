@@ -1507,6 +1507,46 @@
       "priority": "high",
       "recurrence": "daily",
       "category": "personal"
+    },
+    {
+      "id": "uh7521n33ljmnfcqjgt",
+      "taskId": "h9r19bsnlqnmmjlboh9",
+      "taskTitle": "Daily Production Meeting",
+      "completedAt": "2026-04-01T01:13:10.157Z",
+      "date": "2026-03-31",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "m3kml03dnsfmnfcqkp9",
+      "taskId": "a8zj2zn1z86mmjm4vai",
+      "taskTitle": "Flowmax",
+      "completedAt": "2026-04-01T01:13:11.757Z",
+      "date": "2026-03-31",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
+    },
+    {
+      "id": "4lxewvoyue9mnfcqmlc",
+      "taskId": "24za4nplemmmjm65yw",
+      "taskTitle": "Daily Scheduling Meeting",
+      "completedAt": "2026-04-01T01:13:14.208Z",
+      "date": "2026-03-31",
+      "priority": "high",
+      "recurrence": "weekdays",
+      "category": "work"
+    },
+    {
+      "id": "blrnp9hyorhmnfcqnwt",
+      "taskId": "n9dlsmxjvlmmjmenmh",
+      "taskTitle": "Bloodpressure Medicine",
+      "completedAt": "2026-04-01T01:13:15.917Z",
+      "date": "2026-03-31",
+      "priority": "high",
+      "recurrence": "daily",
+      "category": "personal"
     }
   ],
   "settings": {
@@ -1514,5 +1554,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-03-31T16:55:34.227Z"
+  "savedAt": "2026-04-01T01:13:24.512Z"
 }
