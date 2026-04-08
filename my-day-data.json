@@ -738,6 +738,19 @@
       "active": true,
       "createdAt": "2026-04-08T13:53:53.458Z",
       "specificDate": "2026-04-08"
+    },
+    {
+      "id": "af2juhf1cucmnqe9hkz",
+      "title": "Create Camera Page",
+      "notes": "",
+      "targetTime": "",
+      "notify": false,
+      "webLink": "",
+      "priority": "low",
+      "recurrence": "weekdays",
+      "private": false,
+      "active": true,
+      "createdAt": "2026-04-08T18:41:21.731Z"
     }
   ],
   "completions": [
@@ -1674,5 +1687,5 @@
     "ntfyTopic": "",
     "leadTime": 10
   },
-  "savedAt": "2026-04-08T18:02:12.012Z"
+  "savedAt": "2026-04-08T18:41:29.845Z"
 }
